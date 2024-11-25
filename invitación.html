@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boda Jorge & Saira</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+            rel="stylesheet">
+    </head>
+    <body class="bg-light w-100">
+        <article class="w-100 col-12">
+            <div class="container-fluid p-0">
+                <div class="curved-image-container position-relative">
+                    <img src="Recursos/Portada.jpg"
+                        class="img-fluid w-100 curved-image" alt="Portada">
+                    <div class="curve-layer layer1"></div>
+                    <div class="curve-layer layer2"></div>
+                </div>
+            </div>
+        </article>
+        <article class="fade-article">
+            <div
+                class="d-flex flex-column align-items-center justify-content-center w-100">
+                <p class="TituloBoda">Boda</p>
+                <p class="TituloBoda">Jorge</p>
+                <p class="TituloBoda">&</p>
+                <p class="TituloBoda">Saira</p>
+            </div>
+        </article>
+
+        <article class="fade-article">
+            <div
+                class="d-flex flex-column align-items-center justify-content-center w-100">
+                <p class="Versiculo">Todo lo hizo hermoso en su tiempo ...</p>
+                <p class="Versiculo">Eclesiastes 3:11</p>
+            </div>
+        </article>
+
+        <article
+            class="d-flex flex-column justify align-items-center justify-content-center text-light fade-article">
+            <div id="ContenedorReproductor"
+                class="d-flex flex-column justify align-items-center justify-content-center rounded-5 p-4 m-5 col-9 opacity-75">
+                <h2>Canción</h2>
+                <h3>por Artista | Nombre Cancion</h3>
+                <audio id="cancion">
+                    <source src type="audio/mpeg" />
+                </audio>
+                <div
+                    class="d-flex flex-row col-11">
+                    <div class="controles mt-4">
+                        <button class="boton-reproducir-pausar iconoControl">
+                            <i class="bi bi-play-fill"
+                                id="iconoControl"></i>
+                        </button>
+                    </div>
+                    <input type="range" value="0" id="progreso"
+                        class="mt-5 ms-3 w-100" />
+                    <h2 class="ms-2 mt-4">3:00</h2>
+                </div>
+            </div>
+        </article>
+        <article class="d-flex justify-content-center align-items-center my-2">
+            <div id="carouselExample" class="carousel slide col-6"
+                style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-toggle="modal"
+                        data-bs-target="#imageModal"
+                        data-src="Recursos/slader1.jpg">
+                        <img src="Recursos/slader1.jpg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-toggle="modal"
+                        data-bs-target="#imageModal"
+                        data-src="Recursos/slader2.jpg">
+                        <img src="Recursos/slader2pre.jpg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-toggle="modal"
+                        data-bs-target="#imageModal"
+                        data-src="Recursos/slader3.jpg">
+                        <img src="Recursos/slader3pre.jpg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Modal único -->
+            <div class="modal fade" id="imageModal" tabindex="-1"
+                aria-labelledby="imageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div
+                        class="modal-content d-flex justify-content-around bg-transparent border-0">
+                        <div class="modal-body text-center">
+                            <img id="modalImage" class="img-fluid"
+                                style="max-height: 90vh;" alt="...">
+                        </div>
+                        <button class="carousel-control-prev" id="modalPrev"
+                            type="button"
+                            style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);">
+                            <span class="carousel-control-prev-icon"
+                                aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" id="modalNext"
+                            type="button"
+                            style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);">
+                            <span class="carousel-control-next-icon"
+                                aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article style="color:rgb(47, 81, 65) ;">
+            <div
+                class="d-flex flex-column align-items-center justify-content-center w-100 clipped-triangle-back ">
+                <div
+                    class="d-flex flex-column align-items-center justify-content-center w-100 clipped-triangle pb-5">
+                    <div
+                        class="col-11 bg-light rounded-5 content-columns mb-5 fade-Contenedor ">
+                        <img src="Recursos/Fondo1Carta.png"
+                            class="d-block w-100 content-item rounded-4" alt>
+                        <img src="Recursos/Invitacion1.jpg"
+                            class="d-block w-100 content-item rounded-4" alt>
+                        <img src="Recursos/invitacion2.jpg"
+                            class="d-block w-100 content-item rounded-4" alt>
+                        <div
+                            class="d-flex flex-column align-items-center justify-content-center w-100 content-item">
+                            <div
+                                class="d-flex flex-column align-items-center justify-content-center w-100">
+                                <h1>Detalles
+                                    del evento</h1>
+                                <i class="bi bi-calendar4-event"
+                                    style="font-size: 3rem;"></i>
+                                <h1>00
+                                    de Enero de 2025</h1>
+                            </div>
+                            <img src="Recursos/Fondo2Carta.png"
+                                class="d-block w-100 content-item rounded-4"
+                                alt>
+                            <a class="text-decoration-none content-item"
+                                href="https://www.waze.com/en/live-map/directions/finca-santa-cecilia-huehuetenango?place=w.175964313.1759708669.11157868">
+                                <div class="text-light rounded-5 px-3 pt-2 pb-1"
+                                    style="background-color: rgb(77, 123, 101); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); ">
+                                    <h5
+                                        style="font-family:'Franklin Gothic Medium';">Llegar
+                                        Usando Waze</h5>
+                                </div>
+                            </a>
+                            <a class="text-decoration-none content-item"
+                                href="https://maps.app.goo.gl/hm2LTHv8bNEmHEn86">
+                                <div class="text-light rounded-5 px-3 pt-2 pb-1"
+                                    style="background-color: rgb(77, 123, 101); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); ">
+                                    <h5
+                                        style="font-family:'Franklin Gothic Medium';">Llegar
+                                        Usando Maps</h5>
+                                </div>
+                            </a>
+                            <div
+                                class="d-flex align-items-center flex-column justify-content-center text-center content-item">
+                                <i class="bi bi-people-fill"
+                                    style="font-size: 3rem;"></i>
+                                <h2>Evento solo para adultos</h2>
+                                <h3>Nuestra celebración sera nocturna y al aire
+                                    libre, por lo mismo, hemos decidido no
+                                    invitar a niños.</h3>
+                                <h3>Esperamos que no sea impedimento para que
+                                    asistan a nuestra boda.</h3>
+                            </div>
+
+                            <div
+                                class="d-flex align-items-center flex-column justify-content-center text-center content-item">
+                                <i class="bi bi-gift-fill"
+                                    style="font-size: 3rem;"></i>
+                                <h2>Obsequio</h2>
+                                <h3>Nuestro mejor regalo es que estés con
+                                    nosotros, pero si deseas hacernos un
+                                    obsequio, que sea en efectivo y con esto
+                                    bendices el comienzo de nuestro matrimonio,
+                                    que Dios te multiplique. </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-10 bg-light">
+                        <img src="Recursos/Fondo3Carta.png"
+                            class="d-block w-100  rounded-4" alt>
+                        <div id="carouselExampleIndicators"
+                            class="carousel slide carousel-fade"
+                            data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="0" class="active"
+                                    aria-current="true"
+                                    aria-label="Slide 1"></button>
+                                <button type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                                <button type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="4"
+                                    aria-label="Slide 5"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active "
+                                    data-bs-interval="2000">
+                                    <img src="Recursos/2carusel1.jpg"
+                                        class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item"
+                                    data-bs-interval="2000">
+                                    <img src="Recursos/2carusel2.jpg"
+                                        class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item"
+                                    data-bs-interval="2000">
+                                    <img src="Recursos/2carusel3.jpg"
+                                        class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item"
+                                    data-bs-interval="2000">
+                                    <img src="Recursos/2carusel4.jpg"
+                                        class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item"
+                                    data-bs-interval="2000">
+                                    <img src="Recursos/2carusel5.jpg"
+                                        class="d-block w-100"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"
+                                    aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"
+                                    aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <img src="Recursos/Fondo4Carta.png"
+                            class="d-block w-100  rounded-4" alt>
+                    </div>
+                    <div
+                        class="col-11 bg-light rounded-3 mb-5 fade-Contenedor d-flex flex-column align-items-center justify-content-center mt-3">
+                        <h1 class="py-5">¡Es momento de celebrar juntos!</h1>
+
+                        <div class="container w-100 py-5">
+                            <div class="container-segment">
+
+                                <div class="segment">
+                                    <div class="flip-card" data-days-tens>
+                                        <div class="top">0</div>
+                                        <div class="bottom">0</div>
+                                    </div>
+                                    <div class="flip-card" data-days-ones>
+                                        <div class="top">0</div>
+                                        <div class="bottom">0</div>
+                                    </div>
+                                </div>
+                                <div class="segment-title">Dias</div>
+                            </div>
+                            <div class="container-segment">
+
+                                <div class="segment">
+                                    <div class="flip-card" data-hours-tens>
+                                        <div class="top">0</div>
+                                        <div class="bottom">0</div>
+                                    </div>
+                                    <div class="flip-card" data-hours-ones>
+                                        <div class="top">0</div>
+                                        <div class="bottom">0</div>
+                                    </div>
+                                </div>
+                                <div class="segment-title">Horas</div>
+                            </div>
+                            <div class="container-segment">
+
+                                <div class="segment">
+                                    <div class="flip-card" data-minutes-tens>
+                                        <div class="top">0</div>
+                                        <div class="bottom">0</div>
+                                    </div>
+                                    <div class="flip-card" data-minutes-ones>
+                                        <div class="top">0</div>
+                                        <div class="bottom">0</div>
+                                    </div>
+                                </div>
+                                <div class="segment-title">Minutos</div>
+                            </div>
+                            <div class="container-segment">
+
+                                <div class="segment">
+                                    <div class="flip-card" data-seconds-tens>
+                                        <div class="top">0</div>
+                                        <div class="bottom">0</div>
+                                    </div>
+                                    <div class="flip-card" data-seconds-ones>
+                                        <div class="top">0</div>
+                                        <div class="bottom">0</div>
+                                    </div>
+                                </div>
+                                <div class="segment-title">Segundos</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        <article>
+            <div
+                class="col-11 bg-light rounded-5 mb-5 fade-Contenedor">
+            </div>
+        </article>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            d
+            crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,355 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+.alex-brush-regular {
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .satisfy-regular {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  :root {
+    --blanco:rgba(228,228,228,1);
+    }
+*{
+    font-family:'Alex Brush';
+}
+  .Versiculo{
+    font-family: "Satisfy";
+    font-size: 3vh;
+    background: linear-gradient(to bottom, rgb(218, 173, 25), rgb(255, 153, 51));
+    -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
+    color: transparent; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+  }
+  .TituloBoda {
+    font-family: "Alex Brush";
+    font-size: 14vh;
+    height: 14vh; /* Controla la altura del contenedor */
+    line-height: 17vh; /* Asegura que el texto se ajuste dentro de la altura */
+    background: linear-gradient(to bottom, rgb(218, 173, 25), rgb(255, 153, 51));
+    -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
+    color: transparent; /* Hace que el color del texto sea transparente para que se vea el gradiente */
+    overflow: hidden; /* Evita que el texto se desborde y asegura que se corte solo por el borde */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.curved-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.curved-image {
+    clip-path: ellipse(60% 25% at 50% 100%);
+    -webkit-clip-path: ellipse(100% 100% at 50% -1%);
+}
+
+.curve-layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5%; /* La altura puede ser ajustada para controlar la cantidad de desvanecimiento */
+    pointer-events: none; /* Evita que las capas interfieran con el contenido interactivo */
+}
+.layer2 {
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(247, 247, 247) 50%);
+    z-index: 2; /* Asegura que esta capa esté por encima de la primera capa */
+}
+.reproductor-musica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    width: 380px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgba(228,228,228,0.1);
+}
+
+.reproductor-musica h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.reproductor-musica p {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+#progreso {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    background: rgba(165, 165, 165, 0.4);
+    border-radius: 4px;
+    margin: 32px 0 24px;
+    cursor: pointer;
+}
+
+#progreso::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    background: rgba(165, 165, 165, 0.9);
+    width: 16px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    outline: 4px solid var(--blanco);
+    box-shadow: 0 6px 10px rgba(228, 228, 228, 0.3);
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.controles button {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 7vh;
+    background: none;
+    color: var(--blanco);
+    border-radius: 50%;
+    border: 1px solid var(--blanco);
+    box-shadow: 0 6px 10px rgba(228, 228, 228, 0.3);
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.controles .control:hover {
+    transform: scale(1.1);
+}
+
+.controles .iconoControl{
+    transform: scale(1.3);
+}
+
+.controles .iconoControl:hover {
+    transform: scale(1.4);
+}
+#iconoControl {
+    font-size: 2rem; 
+    display: inline-block;
+}
+#ContenedorReproductor{
+    background: linear-gradient(to bottom, rgb(218, 173, 25), rgb(255, 153, 51));
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); 
+}
+/*Modal carrusel*/
+.modal-dialog {
+    max-height: 90vh; /* Limita la altura del modal al 90% de la ventana */
+}
+
+.modal-content {
+    height: 100%; /* Asegura que el contenido ocupe todo el espacio disponible dentro del modal */
+    overflow: hidden; /* Evita la barra de desplazamiento */
+}
+
+@keyframes aparecerDesdeElCentro {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.fade-article{
+    visibility: hidden; /* Oculta inicialmente */
+    opacity: 0;
+    transform: scale(0.5);
+    transition: visibility 0s, opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-article.visible {
+    visibility: visible; /* Hace visible el elemento */
+    opacity: 1;
+    transform: scale(1); /* Tamaño normal */
+}
+.fade-Contenedor {
+    visibility: hidden; /* Oculta inicialmente */
+    opacity: 0;
+    transform: scale(0.5);
+    transition: visibility 0s, opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.fade-Contenedor.visible {
+    visibility: visible; /* Hace visible el elemento */
+    opacity: 1;
+    transform: scale(1); /* Tamaño normal */
+}
+
+.aparecer {
+    animation: aparecerDesdeElCentro 1s ease-out forwards;
+}
+
+.custom-modal {
+    max-height: 80vh; /* Modal tendrá un máximo de 80% de la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta el contenido que exceda el tamaño */
+}
+
+.modal-img {
+    max-height: 100%; /* La imagen no excederá la altura del modal */
+    width: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor */
+}
+
+#modalImage {
+    max-height: 90vh; /* La imagen se adapta al 90% del alto de la ventana */
+    max-width: 90vw; /* También se adapta al ancho */
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%; /* Asegura que la imagen ocupe todo el modal */
+}
+
+/* Contenedor con la invitación: */
+.clipped-triangle {
+    background-color: rgb(47, 81, 65);
+    clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 3%, 50% 2%, 100% 3%, 100% 100%, 0 100%);
+    width: 100%;
+    position: relative;
+
+}
+.clipped-triangle-back {
+    background-color: rgb(77, 123, 101);
+    clip-path: polygon(0 0, 50% 20%, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 50% 2%, 100% 0, 100% 100%, 0 100%);
+    width: 100%;    
+    position: relative;
+}
+
+.content-columns {
+    height: 273vh; /* Altura máxima del contenedor */
+    column-count: 2; /* Divide en 2 columnas */
+    column-gap: 5vh; /* Espacio entre las columnas */
+    margin-top: 30vh;
+    padding: 5vh;
+    position: relative;
+}
+
+.content-item {
+    break-inside: avoid; /* Evita que un elemento se divida entre columnas */
+    margin-bottom: 5vh; /* Espaciado entre elementos */
+}
+
+
+
+
+
+
+.flip-card {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    border-radius: .1em;
+  }
+  
+  .top,
+  .bottom,
+  .flip-card .top-flip,
+  .flip-card .bottom-flip {
+    height: .75em;
+    line-height: 1;
+    padding: .25em;
+    overflow: hidden;
+  }
+  
+  .top,
+  .flip-card .top-flip {
+    background-color: #f7f7f7;
+    border-top-right-radius: .1em;
+    border-top-left-radius: .1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .bottom,
+  .flip-card .bottom-flip {
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    border-bottom-right-radius: .1em;
+    border-bottom-left-radius: .1em;
+  }
+  
+  .flip-card .top-flip {
+    position: absolute;
+    width: 100%;
+    animation: flip-top 250ms ease-in;
+    transform-origin: bottom;
+  }
+  
+  @keyframes flip-top {
+    100% {
+      transform: rotateX(90deg);
+    }
+  }
+  
+  .flip-card .bottom-flip {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: flip-bottom 250ms ease-out 250ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+  }
+  
+  @keyframes flip-bottom {
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
+  
+  .container {
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+    font-size: 10vh;
+  }
+  .container div {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .container-segment {
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    align-items: center;
+  }
+  
+  .segment {
+    display: flex;
+    gap: .1em;
+  }
+  
+  .segment-title {
+    font-size: 1rem;
+  }
+  @media only screen and (max-width: 560px) {
+    .content-columns {
+        height: 100%; /* Altura máxima del contenedor */
+        column-count: 1; /* Divide en 2 columnas */
+    }
+    .container {
+        font-size: 5vh;
+      }
+}
