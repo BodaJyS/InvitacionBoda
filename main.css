@@ -19,22 +19,11 @@
   .Versiculo{
     font-family: "Satisfy";
     font-size: 3vh;
-    background: linear-gradient(to bottom, rgb(218, 173, 25), rgb(255, 153, 51));
-    -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
-    color: transparent; 
+    background: linear-gradient(to bottom, rgb(156, 144, 89), rgb(151, 113, 76));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
   }
-  .TituloBoda {
-    font-family: "Alex Brush";
-    font-size: 14vh;
-    height: 14vh; /* Controla la altura del contenedor */
-    line-height: 17vh; /* Asegura que el texto se ajuste dentro de la altura */
-    background: linear-gradient(to bottom, rgb(218, 173, 25), rgb(255, 153, 51));
-    -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
-    color: transparent; /* Hace que el color del texto sea transparente para que se vea el gradiente */
-    overflow: hidden; /* Evita que el texto se desborde y asegura que se corte solo por el borde */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
-}
 
 .curved-image-container {
     position: relative;
@@ -43,14 +32,14 @@
 
 .curved-image {
     clip-path: ellipse(60% 25% at 50% 100%);
-    -webkit-clip-path: ellipse(100% 100% at 50% -1%);
+    -webkit-clip-path: ellipse(200% 100% at 50% 0%);
 }
 
 .curve-layer {
     position: absolute;
     left: 0;
     right: 0;
-    height: 5%; /* La altura puede ser ajustada para controlar la cantidad de desvanecimiento */
+    height: 3%; /* La altura puede ser ajustada para controlar la cantidad de desvanecimiento */
     pointer-events: none; /* Evita que las capas interfieran con el contenido interactivo */
 }
 .layer2 {
@@ -115,9 +104,9 @@
     width: 100%;
     height: 7vh;
     background: none;
-    color: var(--blanco);
+    color: rgb(156, 144, 89);;
     border-radius: 50%;
-    border: 1px solid var(--blanco);
+    border: 1px solid rgb(156, 144, 89);
     box-shadow: 0 6px 10px rgba(228, 228, 228, 0.3);
     cursor: pointer;
     transition: all 0.1s linear;
@@ -139,7 +128,7 @@
     display: inline-block;
 }
 #ContenedorReproductor{
-    background: linear-gradient(to bottom, rgb(218, 173, 25), rgb(255, 153, 51));
+    background:rgb(28, 48, 39);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); 
 }
 /*Modal carrusel*/
@@ -222,7 +211,7 @@
 
 /* Contenedor con la invitación: */
 .clipped-triangle {
-    background-color: rgb(47, 81, 65);
+    background-color: rgba(255, 255, 255, 0.516);
     clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(0 3%, 50% 2%, 100% 3%, 100% 100%, 0 100%);
     width: 100%;
@@ -230,7 +219,7 @@
 
 }
 .clipped-triangle-back {
-    background-color: rgb(77, 123, 101);
+    background-color: rgb(28, 48, 39);
     clip-path: polygon(0 0, 50% 20%, 100% 0, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(0 0, 50% 2%, 100% 0, 100% 100%, 0 100%);
     width: 100%;    
@@ -238,12 +227,13 @@
 }
 
 .content-columns {
-    height: 273vh; /* Altura máxima del contenedor */
+    height: 325vh; /* Altura máxima del contenedor */
     column-count: 2; /* Divide en 2 columnas */
     column-gap: 5vh; /* Espacio entre las columnas */
-    margin-top: 30vh;
+    margin-top: 40vh;
     padding: 5vh;
     position: relative;
+    background-color:rgb(28, 48, 39);
 }
 
 .content-item {
@@ -344,7 +334,23 @@
   .segment-title {
     font-size: 1rem;
   }
-  @media only screen and (max-width: 560px) {
+  .colorDorado{
+    background: linear-gradient(to bottom, rgb(156, 144, 89), rgb(100, 65, 30));
+  }
+#Carta h1, 
+#Carta i, 
+#Carta h2, 
+#Carta h3, 
+#Carta h4, 
+#Carta h6, 
+#ContenedorReproductor h2,
+#ContenedorReproductor h3,
+#ContenedorReproductor i{
+    background: linear-gradient(to bottom, rgb(156, 144, 89), rgb(100, 65, 30));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  @media only screen and (max-width: 608px) {
     .content-columns {
         height: 100%; /* Altura máxima del contenedor */
         column-count: 1; /* Divide en 2 columnas */
@@ -352,4 +358,9 @@
     .container {
         font-size: 5vh;
       }
+}
+@media only screen and (max-width: 322px) {
+  .container {
+      font-size: 3vh;
+    }
 }
