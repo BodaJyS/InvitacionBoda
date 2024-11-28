@@ -227,7 +227,7 @@
 }
 
 .content-columns {
-    height: 325vh; /* Altura máxima del contenedor */
+    height: 335vh; /* Altura máxima del contenedor */
     column-count: 2; /* Divide en 2 columnas */
     column-gap: 5vh; /* Espacio entre las columnas */
     margin-top: 40vh;
