@@ -227,7 +227,7 @@
 }
 
 .content-columns {
-    height: 335vh; /* Altura máxima del contenedor */
+    height: 350vh; /* Altura máxima del contenedor */
     column-count: 2; /* Divide en 2 columnas */
     column-gap: 5vh; /* Espacio entre las columnas */
     margin-top: 40vh;
@@ -345,7 +345,9 @@
 #Carta h6, 
 #ContenedorReproductor h2,
 #ContenedorReproductor h3,
-#ContenedorReproductor i{
+#ContenedorReproductor i,
+#exampleModal h1,
+#exampleModal i{
     background: linear-gradient(to bottom, rgb(156, 144, 89), rgb(100, 65, 30));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -359,8 +361,8 @@
         font-size: 5vh;
       }
 }
-@media only screen and (max-width: 322px) {
+@media only screen and (max-width: 360px) {
   .container {
-      font-size: 3vh;
+      font-size: 4vh;
     }
 }

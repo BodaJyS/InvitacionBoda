@@ -106,7 +106,7 @@ function iniciarModal() {
 
 // --- FUNCIONES PARA TEMPORIZADOR ---
 function iniciarTemporizador() {
-    const countToDate = new Date("2025-01-04T00:00:00").getTime();
+    const countToDate = new Date("2025-01-04T16:30:00").getTime();
 
     setInterval(() => {
         const currentDate = new Date().getTime();
@@ -263,7 +263,7 @@ if (numeroInvitacion > 0 && numeroInvitacion <= invitaciones.length) {
     const invitacionSeleccionada = invitaciones[numeroInvitacion - 1];
     document.getElementById("nombreInvitado").value = invitacionSeleccionada.nombre;
     document.getElementById("idInvitado").value = numeroInvitacion;
-    document.getElementById("mensaje").textContent = `Hola! ${invitacionSeleccionada.nombre}, nos sería de gran utilidad, para organizarnos mejor, su confirmación a más tardar el día 18 de octubre.`;
+    document.getElementById("mensaje").textContent = `Hola! ${invitacionSeleccionada.nombre},  para organizarnos mejor, nos encantaría tu confirmación a más tardar el día 18 de diciembre de 2024.`;
     const numeroSelect = document.getElementById("numero");
     numeroSelect.innerHTML = '<option value="">Selecciona el número de invitados</option>';
     
@@ -318,7 +318,11 @@ form.addEventListener("submit", e => {
     .then(response => {
         if (response.ok) {
             // Si la respuesta es exitosa, mostrar el alert
-            alert('¡Formulario enviado correctamente!');
+            const modalElement = document.getElementById('exampleModal');
+        const modal = new bootstrap.Modal(modalElement);
+
+        // Mostrar el modal
+        modal.show();
         } else {
             // Si hubo un error en la respuesta
             alert('Hubo un error al enviar el formulario, por favor inténtalo de nuevo.');
