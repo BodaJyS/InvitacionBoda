@@ -227,7 +227,7 @@
 }
 
 .content-columns {
-    height: 350vh; /* Altura máxima del contenedor */
+    height: 370vh; /* Altura máxima del contenedor */
     column-count: 2; /* Divide en 2 columnas */
     column-gap: 5vh; /* Espacio entre las columnas */
     margin-top: 40vh;
@@ -338,6 +338,9 @@
   .colorDorado{
     background: linear-gradient(to bottom, rgb(156, 144, 89), rgb(100, 65, 30));
   }
+  #imagenTitulo{
+    width: 50vw;
+  }
 #Carta h1, 
 #Carta i, 
 #Carta h2, 
@@ -361,9 +364,12 @@
     .container {
         font-size: 3vh;
       }
+      #imagenTitulo{
+        width: 100vw;
+      }
 }
 @media only screen and (max-width: 360px) {
   .container {
-      font-size: 2vh;
+      font-size: 3vh;
     }
 }

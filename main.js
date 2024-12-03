@@ -274,7 +274,7 @@ if (numeroInvitacion > 0 && numeroInvitacion <= invitaciones.length) {
         numeroSelect.appendChild(option);
     }
 } else {
-    document.getElementById("mensaje").textContent = "Queridos amigos y familia, nos sería de gran utilidad, para organizarnos mejor, su confirmación a más tardar el día 18 de octubre.";
+    document.getElementById("mensaje").textContent = "Queridos amigos y familia, nos sería de gran utilidad, para organizarnos mejor, su confirmación a más tardar el día 18 de diciembre.";
 }
 
 var form = document.getElementById('sheetdb-form');
