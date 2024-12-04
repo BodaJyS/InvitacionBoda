@@ -338,6 +338,10 @@
   #imagenTitulo{
     width: 50vw;
   }
+  #copy{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(37, 68, 54, 0.4);
+  }
 #Carta h1, 
 #Carta i, 
 #Carta h2, 
