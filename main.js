@@ -77,6 +77,23 @@ function iniciarIntersectionObserver(clase, threshold = 0.5) {
 
     elements.forEach((element) => observer.observe(element));
 }
+function iniciarIntersectiondiv(clase, threshold = 0.5) {
+    const elements = document.querySelectorAll(clase);
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: threshold }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+}
 
 // --- FUNCIONES PARA MODAL ---
 function iniciarModal() {
@@ -122,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Intersection Observer
     iniciarIntersectionObserver(".fade-article", 0.1);
-    iniciarIntersectionObserver(".fade-Contenedor", 0.01);
+    iniciarIntersectiondiv(".fade-Contenedor", 0);
 
     // Modal
     iniciarModal();
