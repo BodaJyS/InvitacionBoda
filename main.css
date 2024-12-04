@@ -224,7 +224,7 @@
 }
 
 .content-columns {
-    height: 370vh; /* Altura máxima del contenedor */
+    height: 388vh; /* Altura máxima del contenedor */
     column-count: 2; /* Divide en 2 columnas */
     column-gap: 5vh; /* Espacio entre las columnas */
     margin-top: 40vh;
@@ -237,10 +237,6 @@
     break-inside: avoid; /* Evita que un elemento se divida entre columnas */
     margin-bottom: 5vh; /* Espaciado entre elementos */
 }
-
-
-
-
 
 
 .flip-card {
@@ -342,6 +338,13 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgba(37, 68, 54, 0.4);
   }
+  .bordetopdiv{
+    background-color: rgb(28, 48, 39);   
+    clip-path: ellipse(60% 25% at 50% 100%);
+    -webkit-clip-path: ellipse(200% 100% at 50% 0%);
+    
+
+  }
 #Carta h1, 
 #Carta i, 
 #Carta h2, 
@@ -369,9 +372,13 @@
       #imagenTitulo{
         width: 100vw;
       }
+
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 425px) {
   .container {
       font-size: 3vh;
+    }
+    .custom-shape-divider-top-1733292957 svg {
+      margin-left: 50vh;
     }
 }
