@@ -263,7 +263,11 @@ if (numeroInvitacion > 0 && numeroInvitacion <= invitaciones.length) {
     const invitacionSeleccionada = invitaciones[numeroInvitacion - 1];
     document.getElementById("nombreInvitado").value = invitacionSeleccionada.nombre;
     document.getElementById("idInvitado").value = numeroInvitacion;
-    document.getElementById("mensaje").textContent = `Hola! ${invitacionSeleccionada.nombre},  para organizarnos mejor, nos encantaría tu confirmación a más tardar el día 18 de diciembre de 2024.`;
+    let Trato = "tu";
+    if (invitacionSeleccionada.totalInvitados > 1) { 
+        Trato = "su";
+    }
+    document.getElementById("mensaje").textContent = `Hola! ${invitacionSeleccionada.nombre},  para organizarnos mejor, nos encantaría ${Trato} confirmación a más tardar el día 18 de diciembre de 2024.`;
     const numeroSelect = document.getElementById("numero");
     numeroSelect.innerHTML = '<option value="">Selecciona el número de invitados</option>';
     

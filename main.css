@@ -14,7 +14,7 @@
     --blanco:rgba(228,228,228,1);
     }
 *{
-    font-family:'Alex Brush';
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
   .Versiculo{
     font-family: "Satisfy";
@@ -355,6 +355,7 @@
     background: linear-gradient(to bottom, rgb(156, 144, 89), rgb(100, 65, 30));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family:'Alex Brush';
 }
   @media only screen and (max-width: 608px) {
     .content-columns {
