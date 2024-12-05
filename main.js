@@ -270,7 +270,9 @@ const invitaciones = [
     { nombre: "Poncia Saldivar y Mayly Figueroa", totalInvitados: 2 },
     { nombre: "Jorge Figueroa y Doris", totalInvitados: 2 },
     { nombre: "Brayan Girón y Pareja", totalInvitados: 2 },
-    { nombre: "Odilia Leiva y Pareja", totalInvitados: 2 }
+    { nombre: "Odilia Leiva y Pareja", totalInvitados: 2 },
+    { nombre: "Hno. Osmar Tello y Sra", totalInvitados: 2 },
+    { nombre: "Jenniffer Mcklen", totalInvitados: 1 }
 ];
 
 const urlParams = new URLSearchParams(window.location.search);
