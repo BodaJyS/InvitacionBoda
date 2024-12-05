@@ -360,7 +360,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family:'Alex Brush';
-    font-weight: bold;
 }
   @media only screen and (max-width: 608px) {
     .content-columns {
