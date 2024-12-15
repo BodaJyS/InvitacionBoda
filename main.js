@@ -273,8 +273,9 @@ const invitaciones = [
     { nombre: "Odilia Leiva y Pareja", totalInvitados: 2 },
     { nombre: "Hno. Osmar Tello y Sra", totalInvitados: 2 },
     { nombre: "Jenniffer Mcklen", totalInvitados: 1 },
-    { nombre: "Alexander Figueroa y Amarilis Pérez", totalInvitados: 2 }
-
+    { nombre: "Alexander Figueroa y Amarilis Pérez", totalInvitados: 2 },
+    { nombre: "Tony Figueroa", totalInvitados: 1 },
+    { nombre: "David y Alejandra", totalInvitados: 2 }
 ];
 
 const urlParams = new URLSearchParams(window.location.search);
